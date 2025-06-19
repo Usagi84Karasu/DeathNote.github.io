@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Death Note</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: black;
+      color: white;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .swiper-slide {
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    .page-content {
+      width: 100%;
+      max-width: 600px;
+      height: 90%;
+      border: 1px solid #444;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .editable {
+      outline: none;
+      white-space: pre-wrap;
+    }
+
+    /* Style Death Note */
+    .title {
+      font-size: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Swiper container -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Page 1: Règles -->
+      <div class="swiper-slide">
+        <div class="page-content">
+          <div class="title">Death Note</div>
+          <p>1. L'humain dont le nom est écrit dans ce carnet meurt.</p>
+          <p>2. Ce carnet ne prendra effet que si l'utilisateur a en tête le visage de la personne.</p>
+          <!-- Ajoute d'autres règles ici -->
+        </div>
+      </div>
+
+      <!-- Page 2: Règles -->
+      <div class="swiper-slide">
+        <div class="page-content">
+          <div class="title">Règles (suite)</div>
+          <p>3. Si la cause de la mort est écrite dans les 40 secondes, elle se produit.</p>
+          <p>4. Sinon, la personne meurt d'une crise cardiaque.</p>
+        </div>
+      </div>
+
+      <!-- Page 3+: Écriture libre -->
+      <div class="swiper-slide">
+        <div class="page-content editable" contenteditable="true">
+          Écris ici...
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-content editable" contenteditable="true">
+          Autre page d’écriture...
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: false,
+      allowTouchMove: true,
+      pagination: false,
+    });
+  </script>
+</body>
+</html>
